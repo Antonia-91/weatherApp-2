@@ -28,6 +28,31 @@ function getResults(query) {
 // skickar in data från fetchen... (weather)
 // Hämnta element och ändra value
 function displayResaults(weather) {
+  let body = document.querySelector(".body");
+  switch (weather.weather[0].main) {
+    case "Clear":
+      document.body.style.backgroundImage = 'url("clear.jpg")';
+      break;
+
+    case "Clouds":
+      document.body.style.backgroundImage = 'url("cloudy.jpg")';
+      break;
+
+    case "Rain":
+    case "Drizzle":
+    case "Mist":
+      document.body.style.backgroundImage = 'url("rain.jpg")';
+      break;
+
+    case "Thunderstorm":
+      document.body.style.backgroundImage = 'url("storm.jpg")';
+      break;
+
+    case "Snow":
+      document.body.style.backgroundImage = 'url("snow.jpg")';
+      break;
+  }
+
   console.log(weather);
   //city
   let city = document.querySelector(".location .city");
@@ -45,7 +70,7 @@ function displayResaults(weather) {
 
   //weather
   let weather_el = document.querySelector(".current .weather");
-  weather_el.innerText = `${weather.weather[0].description}`;
+  weather_el.innerText = `${weather.weather[0].main}`;
 
   //hi-low
   let hilow = document.querySelector(".hi-low");

@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "simple Weather App",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antonia-91/weatherApp-2.git"
+  },
+  "author": "Antonia Pettersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antonia-91/weatherApp-2/issues"
+  },
+  "homepage": "https://github.com/Antonia-91/weatherApp-2#readme"
+}
